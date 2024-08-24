@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Differences between configuration of Tracker AD Toolchain - CB Epic [CB-EPIC:4382255] [ Deleted:false] and Tracker AD Toolchain - CB Item [CB-ITEM:339065] [ Deleted:false]</title>
+        <meta http-equiv="x-ua-compatible" content="IE=Edge">
+        <meta name="description" content="codebeamer is the award winning Collaborative Application Lifecycle Management (ALM) solution for distributed software development. It provides project management, wikis and knowledge management, document management, task, requirement and defect management, configuration management (ITIL), continuous integration, version control, source code analysis and forums through a single and secure environment."/>
+        <meta name="keywords" content="git, mercurial, subversion, svn, bug tracking software, bug tracker software, issue tracking software, issue tracker software, document management software, wiki software, change management software, version control, distributed version control, distributed revision control, alm, forge, codebeamer, code beamer"/>
+        <link rel="icon" href="/cb/urlversioned/202405071406/images/favicon.ico" type="image/png"/>
+        <meta name="parentRequestId" content=""/>
+        <script type="text/javascript" src="/cb/ruxitagentjs_ICANVfqru_10287240325103108.js" data-dtconfig="app=c35720bb16d1dd8f|cuc=o0y3ihhv|mel=100000|featureHash=ICANVfqru|dpvc=1|ssv=4|lastModification=1714144961040|tp=500,50,0|rdnt=1|uxrgce=1|bp=3|agentUri=/cb/ruxitagentjs_ICANVfqru_10287240325103108.js|reportUrl=/cb/rb_42856c54-17fb-4739-92de-14eb0c25be0d|rid=RID_-1235330559|rpid=270219695|domain=bmwgroup.net"></script>
+        <script type="text/javascript">
+
+            if (typeof console == "undefined") {
+                var consoleLog = function(any) {/*alert(any); */
+                };
+                console = {
+                    log: consoleLog,
+                    debug: consoleLog,
+                    warn: consoleLog,
+                    error: consoleLog
+                };
+            } else if (!("debug"in console)) {
+                /* IE8 does not support debug method */
+                console.debug = console.log;
+            }
+
+            var contextPath = '/cb';
+        </script>
+        <script type="text/javascript">
+            // current language
+            var language = 'en';
+
+            var country = '';
+            var i18nETAG = '2fb2e003e2a4389c7fb62449a27362f3';
+
+            console.log("Javascript is using localization: language:" + language + " (resource-language:en), country:" + country + ", i18nETAG:" + i18nETAG);
+        </script>
+        <script type="text/javascript">
+            var developmentMode = false;
+            // add the CB version, can be used to make urls of css/js files versioned so they will get refreshed when CB upgraded automatically
+            var urlVersionParam = '202405071406';
+
+            var ajaxHeaders = {};
+
+            var currentWorkingSetId = -1;
+            ajaxHeaders["workingSetId"] = currentWorkingSetId;
+            // console.log("ajaxHeaders:" + JSON.stringify(ajaxHeaders));
+
+            var cookieSameSite = "Lax";
+
+            var codebeamer = codebeamer || {};
+            codebeamer.GLOBAL_SETTINGS = codebeamer.GLOBAL_SETTINGS || {};
+            codebeamer.GLOBAL_SETTINGS.allowHtmlMode = false;
+            codebeamer.GLOBAL_SETTINGS.insertImageByName = true;
+            codebeamer.GLOBAL_SETTINGS.insertImageByNameAndHash = true;
+
+            console.debug("Using codebeamer.GLOBAL_SETTINGS:" + codebeamer.GLOBAL_SETTINGS);
+        </script>
+        <script type="text/javascript">
+            mxBasePath = contextPath + "/mxGraph/src";
+            mxLoadResources = false;
+            mxLanguage = language;
+        </script>
+        <link rel="stylesheet" href="/cb/urlversioned/202405071406/wro/all.css" type="text/css" media="all"/>
+        <link rel="stylesheet" href="/cb/urlversioned/202405071406/wro/newskin.css" type="text/css" media="all"/>
+        <link rel="stylesheet" href="/cb/urlversioned/202405071406/wro/oslc-client.css" type="text/css" media="all"/>
+        <script type="text/javascript" src="/cb/urlversioned/202405071406/wro/all.js"></script>
+        <script type="text/javascript" src="/cb/urlversioned/202405071406/wro/oslc-client.js"></script>
+        <script type="text/javascript">
+            window.jsErrors = [];
+            window.onerror = function(errorMessage) {
+                (!!window['jsErrors']) || (window.jsErrors = []);
+                window.jsErrors[window.jsErrors.length] = errorMessage;
+            }
+        </script>
+        <style id="jstree-stylesheet"></style>
+        <!-- Using the user specific date-format in Calendar component -->
+        <!-- <script type="text/javascript">
+            $(function() {
+                DateParsing.dateFormat = "MMM dd yyyy";
+            });
+        </script> -->
+        <!-- <script type="text/javascript">
+            // fixing JSPwikis' collapsable shows a bullet on IE by default
+            Collapsable.bullet.innerHTML = "&nbsp;";
+
+            showDiff.loadAllDiffsEnabled = false;
+
+            $(function() {
+                initializeHighchartLocalization(",", ".");
+                initializeJumpToDocumentViewHandler();
+            });
+        </script> -->
+        <!-- <script type="text/javascript">
+            var supportedSchemes = 'doors,mdel'.split(",");
+            $.each(supportedSchemes, function(idx, scheme) {
+                codebeamer.WYSIWYG.config.LinkProtocols.push(scheme);
+            });
+        </script> -->
+        <!-- <script type="text/javascript">
+            $(function() {
+                var userHash = "-1373627510";
+                codebeamer.userDependentStorage.initUserStorages(userHash);
+
+                var emptyHash = "0";
+                if (userHash !== emptyHash) {
+                    clearCookiesAndLocalStorageWhenExpired(userHash);
+                }
+            });
+        </script> -->
+        <!-- <script type="text/javascript">
+            var _csrf = (function() {
+
+                var csrfHeaderName = "";
+                var csrfParameterName = "";
+                var csrfToken = "";
+
+                function initializeCsrf() {
+                    initializeCsrfForm();
+                    initializeCsrfAjaxHeader();
+                }
+
+                function initializeCsrfForm() {
+                    if (hasCsrf()) {
+                        $('form').each(function(i, ele) {
+                            addCsrfHiddenFieldToForm(ele);
+                        });
+                    }
+                }
+
+                function initializeCsrfAjaxHeader() {
+                    $.ajaxSetup({
+                        cache: false,
+                        // turn off caching for any ajax calls as default
+                        headers: getOrCreateAjaxHeaders(csrfHeaderName, csrfToken)
+                    });
+
+                }
+
+                function submitCsrfFormWithUrl(url) {
+                    var form = $('<form method="post" action="' + url + '"></form>');
+                    $(document.body).append(form);
+                    if (hasCsrf()) {
+                        addCsrfHiddenFieldToForm(form);
+                    }
+                    form.submit();
+                }
+
+                function addCsrfHiddenFieldToForm(form) {
+                    if (hasCsrf()) {
+                        var csrfInputFieldValue = $(form).children('input[name="' + csrfParameterName + '"]').val();
+                        if (!csrfInputFieldValue) {
+                            $('<input type="hidden" name="' + csrfParameterName + '" value="' + csrfToken + '"/>').prependTo(form);
+                        }
+                    }
+                }
+
+                function hasCsrf() {
+                    return csrfHeaderName && csrfParameterName && csrfToken;
+                }
+
+                function getOrCreateAjaxHeaders(csrfHeaderName, csrfToken) {
+                    if (window.ajaxHeaders == null) {
+                        window.ajaxHeaders = {};
+                    }
+                    if (hasCsrf()) {
+                        window.ajaxHeaders[csrfHeaderName] = csrfToken;
+                    }
+                    return window.ajaxHeaders;
+                }
+
+                return {
+                    csrfHeaderName: csrfHeaderName,
+                    csrfParameterName: csrfParameterName,
+                    csrfToken: csrfToken,
+                    hasCsrf: hasCsrf,
+                    initializeCsrf: initializeCsrf,
+                    initializeCsrfForm: initializeCsrfForm,
+                    initializeCsrfAjaxHeader: initializeCsrfAjaxHeader,
+                    submitCsrfFormWithUrl: submitCsrfFormWithUrl,
+                    addCsrfHiddenFieldToForm: addCsrfHiddenFieldToForm,
+                }
+            }
+            )();
+
+            try {
+                $(function() {
+                    _csrf.initializeCsrf();
+                })
+            } catch (ignored) {}
+
+            try {
+                _csrf.initializeCsrf();
+            } catch (ignored) {}
+        </script> -->
+        <!-- <script id="parentRequestIdScriptTag" src="/cb/urlversioned/202405071406/js/parentRequestId.js" data-id="" data-header="" data-parametername=""></script> -->
+        <!-- <script type="text/javascript">
+            $(function() {
+                if (codebeamer && codebeamer['WYSIWYG']) {
+                    var cbHumanReadableFileUploadLimit = '5 GB';
+                    codebeamer.WYSIWYG.setCbHumanReadableFileUploadLimit(cbHumanReadableFileUploadLimit);
+                }
+            });
+        </script> -->
+        <script LANGUAGE="JavaScript" type="text/javascript">
+            <!-- Hide script from old browsers
+            // This function will be overwritten by the application page.
+            function resize() {}
+            // -->
+        </script>
+        <script type="text/javascript">
+            // initialize the form related hotkeys
+            new codebeamer.FormHotkeys({
+                isPopup: true
+            });
+            try {
+                if (window.parent != window) {
+                    codebeamer.userPreferences = window.parent.codebeamer.userPreferences || {};
+                }
+            } catch (ignored) {// This can be ignored, probably cross-origin frame access on remote issue reporting
+            }
+        </script>
+    </head>
+    <body class="Chrome yui-skin-cb popupBody newskin trackersModule newskin" onresize="resize();" onload="resize();" bgcolor="white" link="#000000" vlink="#000000" alink="#000000" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+        <div class="contentArea">
+            <!--
+<pre class="debug">
+globalMessagesAlreadyIncluded: true
+</pre>
+-->
+            <meta name="decorator" content="popup"/>
+            <meta name="module" content="tracker"/>
+            <meta name="bodyCSSClass" content="newskin"/>
+            <meta name="useModuleDefaults" content="true"/>
+            <div class="actionMenuBar ">
+                <table border="0" cellpadding="0" cellspacing="0" class="rightAlign actionMenuBarContent" style="">
+                    <tr>
+                        <td class="rightAlignCell ">
+                            <div class="actionMenuBarIcon"></div>
+                        </td>
+                        <td class="rightAlignCell ">
+                            <span class="page-title">Differences between configuration of Tracker AD Toolchain - CB Epic [CB-EPIC:4382255] [ Deleted:false] and Tracker AD Toolchain - CB Item [CB-ITEM:339065] [ Deleted:false]</span>
+                            <meta name="pageTitle" content="Differences between configuration of Tracker AD Toolchain - CB Epic [CB-EPIC:4382255] [ Deleted:false] and Tracker AD Toolchain - CB Item [CB-ITEM:339065] [ Deleted:false]"/>
+                        </td>
+                        <td class="rightAlignCell rightAligned "></td>
+                    </tr>
+                </table>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="actionBar " id="diffActionBar">
+                <a href="/cb/getTrackerConfigDiff.spr?trackerId1=4382255&trackerId2=339065" target="_blank" rel="noopener noreferrer" title="Download the Diff as JSON" style="float:right;">
+                    <img src="/cb/images/download16.png"/>
+                </a>
+            </div>
+            <!--
+<pre class="debug">
+globalMessagesAlreadyIncluded: 
+</pre>
+-->
+            <div class="infoMessages invisible" id="globalMessages">
+                <div class="error invisible" title="Error">
+                    <ul></ul>
+                </div>
+                <div class="warning invisible" title="Warning">
+                    <ul></ul>
+                </div>
+                <div class="information invisible" title="Information">
+                    <ul></ul>
+                </div>
+            </div>
+            <link type="text/css" rel="stylesheet" href="/cb/urlversioned/202405071406/configdiff/includes/diffTree.css" media="all"/>
+            <script type="text/javascript" src="/cb/urlversioned/202405071406/configdiff/includes/diffTree.js"></script>
+            <script type="text/javascript">
+
+                var diffTreeMenuConfig = {
+                    leaveOpen: {
+                        label: 'Leave open',
+                        title: 'Leave expanded nodes open when expanding another sibling node, or collapse siblings nodes upon expanding a new node'
+                    },
+                    onlyChanges: {
+                        label: 'Show only changes',
+                        title: 'Only show the changes, or show the whole configuration'
+                    },
+                    expandAll: {
+                        label: 'Expand all',
+                        title: 'Expand all relevant nodes, according to Show only changes'
+                    },
+                    collapseAll: {
+                        label: 'Collapse all',
+                        title: 'Collapse all currently expanded nodes'
+                    },
+                    navigator: {
+                        firstDiff: {
+                            title: 'Go to first change'
+                        },
+                        prevDiff: {
+                            title: 'Go to previous change',
+                            none: 'This is the first change! Do you want to flip around and jump to the last change instead ?'
+                        },
+                        nextDiff: {
+                            title: 'Go to next change',
+                            none: 'This was the last change! Do you want to flip around and start again with the first change ?'
+                        },
+                        lastDiff: {
+                            title: 'Go to last change'
+                        }
+                    }
+                };
+            </script>
+            <div class="configDiff">
+                <ul class="diffTree" data-first-diff="e451feb5-f7f8-402f-99a5-18230f8f3322" data-last-diff="2dfec039-82f0-423f-8425-ea445b8e2756">
+                    <li class="tracker diff-changed">
+                        <a href="#" title="codeBeamer Item">
+                            CB <span class='diff-deleted'>Epic</span>
+                            <span class='diff-added'>Item</span>
+                        </a>
+                        <ul>
+                            <li class="general diff-changed">
+                                <a href="#">General</a>
+                                <ul>
+                                    <li class="trackerType diff-changed">
+                                        <label class="attribute">Type</label>
+                                        :&nbsp;<label class="trackerType diff-deleted" id="e451feb5-f7f8-402f-99a5-18230f8f3322" data-next-diff="a6e9bf4e-c6a2-431f-b745-a184893b0c92">Requirements</label>
+                                        , <label class="trackerType diff-added" id="a6e9bf4e-c6a2-431f-b745-a184893b0c92" data-prev-diff="e451feb5-f7f8-402f-99a5-18230f8f3322" data-next-diff="c0ecea57-bc5b-443f-8012-44094fc11584">Epics</label>
+                                    </li>
+                                    <li class="string diff-changed" id="c0ecea57-bc5b-443f-8012-44094fc11584" data-prev-diff="a6e9bf4e-c6a2-431f-b745-a184893b0c92" data-next-diff="f204216e-3b49-4d5c-a9bf-27b0b49ebd8c">
+                                        <label class="attribute">Name</label>
+                                        :&nbsp;CB <span class='diff-deleted'>Epic</span>
+                                        <span class='diff-added'>Item</span>
+                                    </li>
+                                    <li class="string diff-changed" id="f204216e-3b49-4d5c-a9bf-27b0b49ebd8c" data-prev-diff="c0ecea57-bc5b-443f-8012-44094fc11584" data-next-diff="0e0613f2-de40-4d6a-a0b7-8e5f177c169e">
+                                        <label class="attribute">Key (short name)</label>
+                                        :&nbsp;CB-<span class='diff-deleted'>EPIC</span>
+                                        <span class='diff-added'>ITEM</span>
+                                    </li>
+                                    <li class="color diff-changed">
+                                        <label class="attribute">Color</label>
+                                        :&nbsp;<label class="color diff-deleted" id="0e0613f2-de40-4d6a-a0b7-8e5f177c169e" data-prev-diff="f204216e-3b49-4d5c-a9bf-27b0b49ebd8c" data-next-diff="a29e310e-2894-4937-8698-8598ad6b3f50">#2ab0d1</label>
+                                        , <label class="color diff-added" id="a29e310e-2894-4937-8698-8598ad6b3f50" data-prev-diff="0e0613f2-de40-4d6a-a0b7-8e5f177c169e" data-next-diff="dde5a0e0-0e33-468a-85e1-acb3c1066487">#00a85d</label>
+                                    </li>
+                                    <li class="layout diff">
+                                        <label class="attribute">Default layout</label>
+                                        :&nbsp;<label class="layout diff">Document View</label>
+                                    </li>
+                                    <li class="string diff-changed" id="dde5a0e0-0e33-468a-85e1-acb3c1066487" data-prev-diff="a29e310e-2894-4937-8698-8598ad6b3f50" data-next-diff="967bbb6f-05cb-414f-8db7-b9dd7e690c3c">
+                                        <label class="attribute">Description</label>
+                                        :&nbsp;<span class='diff-deleted'>This Tracker contains the Epics in which several CCB Items are packed</span>
+                                        <span class='diff-added'>codeBeamer Item</span>
+                                    </li>
+                                    <li class="string diff">
+                                        <label class="attribute">Description Format</label>
+                                        :&nbsp;<label class="string diff">Wiki</label>
+                                    </li>
+                                    <li class="boolean diff">
+                                        <label class="attribute">Workflow</label>
+                                        :&nbsp;<label class="boolean diff">True</label>
+                                    </li>
+                                    <li class="boolean diff-added" id="967bbb6f-05cb-414f-8db7-b9dd7e690c3c" data-prev-diff="dde5a0e0-0e33-468a-85e1-acb3c1066487" data-next-diff="5c8a14e9-2e08-4290-a82b-cd15b8cf5b43">
+                                        <label class="attribute">Always use quick transitions</label>
+                                        :&nbsp;<label class="boolean diff-added">True</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- <script type="text/javascript">
+
+                $('#diffActionBar').diffTreeMenu($('ul.diffTree').diffTree(), diffTreeMenuConfig);
+            </script> -->
+        </div>
+        <!-- flushing out delayed scripts -->
+    </body>

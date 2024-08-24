@@ -2,7 +2,7 @@
 // Object.create
 
 // Object Literals
-// ********* Define a Symbol and add that sybol as a key in objects keys and print (Interview Question)********---
+// ********* Define a Symbol and add that symbol as a key in objects keys and print (Interview Question)********---
 
 const mySym1 =  Symbol("Key1")
 

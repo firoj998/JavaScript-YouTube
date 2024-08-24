@@ -1,5 +1,5 @@
 // array
-
+const dishes=["biryani","pulaav","karahi chicken"]
 const myArr = [0, 1, 2, 3, 4, 5]
 const myHeors = ["shaktiman", "naagraj"]
 
@@ -18,22 +18,43 @@ const myArr2 = new Array(1, 2, 3, 4)
 // console.log(myArr.includes(9));
 // console.log(myArr.indexOf(3));
 
-// const newArr = myArr.join()
+const newArr = dishes.join("-");
 
 // console.log(myArr);
-// console.log( newArr);
+//  console.log( newArr);
 
 
-// slice, splice
+//slice, splice
 
-console.log("A ", myArr);
+// console.log("A ", myArr);
 
 const myn1 = myArr.slice(1, 3)
 
-console.log(myn1);
-console.log("B ", myArr);
+// console.log(myn1);
+// console.log("B ", myArr);
 
 
 const myn2 = myArr.splice(1, 3)
-console.log("C ", myArr);
-console.log(myn2);
+// console.log("C ", myArr);
+// console.log(myn2);
+
+
+
+//  "Arrays and object"  How "reference" passed to variable
+
+let arr = [1,2,3,4,5];
+let getRef = arr;
+
+getRef[5] =9;
+
+console.log("Original array:",arr)  // also changed becoz pointing to same address in memory
+console.log("Reference array: ",getRef)
+console.log("*************************")
+// pass by value
+
+let getValue = [...arr]
+getValue[5] = 10;
+getValue.shift();
+
+console.log("Original array:",arr)   // original value unchanged
+console.log("getValue array: ",getValue)

@@ -1,12 +1,13 @@
+// for- in loop(each iteration return a "Key" of object)
+
 const myObject = {
     js: 'javascript',
     cpp: 'C++',
     rb: "ruby",
     swift: "swift by apple"
-}
-
+} 
 for (const key in myObject) {
-    //console.log(`${key} shortcut is for ${myObject[key]}`);
+   console.log(`${key} shortcut is for ${myObject[key]}`);
 }
 
 const programming = ["js", "rb", "py", "java", "cpp"]

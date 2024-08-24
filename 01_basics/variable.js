@@ -7,5 +7,11 @@ console.log(accountID)
 accountEmail = "firojmohd@mgail.com";
 accountPass = "hello";
 accountCity = "Gonda";
+let accountState;    // undefined
 
-console.table([accountID,accountEmail,accountPass,accountCity]);
+/*
+prefer not to use var because of issue of block scope 
+and function scope.
+*/
+
+console.table([accountID,accountEmail,accountPass,accountCity,accountState]);

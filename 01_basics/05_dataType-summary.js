@@ -1,6 +1,6 @@
 //  Primitive
 
-//  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+//  7 types : String, Number, Boolean, null, undefined, Symbol, BigInt
 
 const score = 100
 const scoreValue = 100.3
@@ -36,7 +36,7 @@ console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++STACK(primitive type) & HEAP Memory(Refernce type)++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++STACK(primitive type means a copy will be get) & HEAP Memory(Refernce type means changes will be in original value)++++++++++++++++
 
 let name1 = "Firoj"
 let anotherName = name1
